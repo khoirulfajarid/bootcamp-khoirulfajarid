@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verifikasi Sertifikat — Bootcamp Hub</title>
+  <meta name="description" content="Periksa keaslian sertifikat kelulusan Bootcamp Hub dengan kode verifikasi atau nomor sertifikat.">
+  <meta name="theme-color" content="#0C1B3A">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=1.0.0">
+  <link rel="stylesheet" href="css/auth.css?v=1.0.0">
+</head>
+<body class="vf-page">
+  <header class="vf-top">
+    <div class="wrap">
+      <a class="brand-auth" href="index.html"><span class="lg"><img src="img/logo.svg" alt=""></span><span><b id="orgNama">Bootcamp Hub</b><small>Verifikasi Kredensial</small></span></a>
+      <a class="btn btn-light btn-sm btn-pill" href="index.html"><span class="ms sm">home</span>Beranda</a>
+    </div>
+    <div class="judul wrap"><span class="sc">Smart Certificate</span><h1>Verifikasi Keaslian Sertifikat</h1></div>
+  </header>
+  <main class="vf-main">
+    <section class="card pad-lg">
+      <form class="vf-cari" id="fCari">
+        <input class="input" id="kode" placeholder="Kode verifikasi / nomor sertifikat" autocomplete="off" required minlength="6" aria-label="Kode verifikasi atau nomor sertifikat">
+        <button class="btn btn-navy btn-lg" type="submit"><span class="ms">search</span>Periksa</button>
+      </form>
+      <p class="hint mt-2">Pindai QR pada sertifikat, atau ketik kode yang tercetak di bawah QR. Pemeriksaan tidak memerlukan login.</p>
+    </section>
+    <section id="hasil" aria-live="polite"></section>
+  </main>
+  <script src="js/config.js?v=1.0.0"></script>
+  <script src="js/core.js?v=1.0.0"></script>
+  <script src="js/verifikasi.js?v=1.0.0" defer></script>
+</body>
+</html>

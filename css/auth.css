@@ -1,0 +1,113 @@
+/* =========================================================================
+   BOOTCAMP HUB — auth.css (masuk.html, kendali.html, verifikasi.html, 404.html)
+   ========================================================================= */
+/* ---------- Portal member: split layout ---------- */
+.auth { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); background: var(--cream); }
+.auth-l { position: relative; background: var(--navy); color: var(--cream-2); padding: 48px 56px; display: flex; flex-direction: column; overflow: hidden; }
+.auth-l .blob { position: absolute; border-radius: 50%; filter: blur(60px); }
+.auth-l .b1 { width: 380px; height: 380px; left: -120px; top: -120px; background: rgba(86,142,135,.25); }
+.auth-l .b2 { width: 300px; height: 300px; right: -100px; bottom: -80px; background: rgba(201,162,75,.16); }
+.auth-l > * { position: relative; z-index: 2; }
+.auth-l h1 { color: var(--cream-2); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.12; margin-top: auto; }
+.auth-l h1 .aksen { display: block; font-family: var(--f-script); color: var(--mint-d); font-size: 1.1em; font-weight: 600; transform: rotate(-1.5deg); transform-origin: left; margin-top: 4px; }
+.auth-l .lead { color: rgba(204,198,188,.95); margin-top: 18px; font-size: 16px; max-width: 460px; }
+.manfaat { list-style: none; padding: 0; margin: 28px 0 auto; display: grid; gap: 14px; max-width: 460px; }
+.manfaat li { display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; color: rgba(232,226,216,.92); }
+.manfaat li .ms { width: 34px; height: 34px; border-radius: 10px; background: rgba(255,255,255,.08); display: grid; place-items: center; color: var(--mint); font-size: 19px; }
+.manfaat b { color: #fff; display: block; font-size: 15px; }
+.auth-l .foot { margin-top: 40px; font-size: 12px; color: var(--navy-soft); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.auth-l .foot a { color: var(--mint-d); }
+.auth-r { display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
+.auth-card { width: 100%; max-width: 480px; }
+.auth-card .head { margin-bottom: 24px; }
+.auth-card .head h2 { font-size: 32px; }
+.auth-card .head p { color: var(--muted); margin-top: 6px; }
+.auth-tabs { display: flex; gap: 4px; background: #EFE8DB; padding: 4px; border-radius: 12px; margin-bottom: 26px; }
+.auth-tabs button { flex: 1; height: 42px; border-radius: 9px; font-weight: 700; font-size: 14px; color: var(--ink-2); }
+.auth-tabs button.on { background: var(--surface); color: var(--navy); box-shadow: 0 2px 8px rgba(12,27,58,.08); }
+.form { display: grid; gap: 16px; }
+.form .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 520px) { .form .g2 { grid-template-columns: 1fr; } }
+.atau { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 6px 0; }
+.atau::before, .atau::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.gbtn-wrap { display: flex; justify-content: center; min-height: 44px; }
+.kekuatan { display: flex; gap: 4px; margin-top: 6px; }
+.kekuatan i { flex: 1; height: 4px; border-radius: 4px; background: var(--line-2); transition: background .2s; }
+.kekuatan.k1 i:nth-child(-n+1) { background: var(--danger); } .kekuatan.k2 i:nth-child(-n+2) { background: var(--gold); } .kekuatan.k3 i:nth-child(-n+3) { background: var(--teal-d); } .kekuatan.k4 i { background: var(--ok); }
+.sukses-box { text-align: center; padding: 28px 8px; }
+.sukses-box .ms { font-size: 56px; color: var(--ok); }
+.sukses-box h3 { margin-top: 12px; font-size: 26px; }
+.sukses-box p { color: var(--ink-2); margin-top: 8px; }
+.brand-auth { display: flex; align-items: center; gap: 10px; color: var(--cream-2); text-decoration: none !important; }
+.brand-auth .lg { width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,.08); display: grid; place-items: center; }
+.brand-auth .lg img { width: 28px; height: 28px; }
+.brand-auth b { font-family: var(--f-serif); font-size: 21px; display: block; line-height: 1; }
+.brand-auth small { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--navy-soft); font-weight: 700; }
+.kembali { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 18px; }
+@media (max-width: 960px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth-l { padding: 28px 24px 34px; }
+  .auth-l h1 { margin-top: 28px; font-size: 30px; }
+  .manfaat { display: none; }
+  .auth-l .foot { display: none; }
+  .auth-r { padding: 32px 20px 48px; align-items: flex-start; }
+}
+
+/* ---------- Kendali (Admin Control Room) ---------- */
+.kendali { min-height: 100vh; background: radial-gradient(1200px 600px at 30% 0%, #13274f 0%, transparent 60%), radial-gradient(900px 500px at 90% 100%, #142a52 0%, transparent 60%), #0B1A38; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 16px; color: var(--cream-2); }
+.kd-card { width: 100%; max-width: 550px; background: var(--surface); color: var(--ink); border-radius: var(--r-xl); padding: 48px 50px 40px; box-shadow: 0 40px 90px rgba(0,0,0,.45); animation: muncul .5s var(--ease); }
+.kd-status { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 18px; border-radius: 10px; background: #F1F3FF; font-size: 12.5px; font-weight: 600; letter-spacing: .03em; color: #2A3150; }
+.kd-status .l { display: flex; align-items: center; gap: 8px; text-transform: uppercase; }
+.kd-status .r { text-align: right; }
+.kd-lock { width: 62px; height: 62px; border-radius: 50%; background: var(--mint); display: grid; place-items: center; margin: 30px auto 14px; color: var(--navy); }
+.kd-lock .ms { font-size: 28px; }
+.kd-card h1 { text-align: center; font-size: 36px; font-weight: 600; }
+.kd-card .sub { text-align: center; color: var(--ink-2); margin-top: 6px; font-size: 15px; }
+.kd-form { display: grid; gap: 18px; margin-top: 32px; }
+.kd-form .label { font-size: 15px; font-weight: 600; }
+.kd-form .label small { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--ink-2); }
+.kd-form .input { height: 52px; border-color: #EEF0F6; box-shadow: 0 1px 3px rgba(12,27,58,.06); font-size: 16px; }
+.kd-btn { height: 58px; border-radius: 10px; font-size: 19px; background: #568E87; box-shadow: 0 4px 12px rgba(86,142,135,.35); }
+.kd-btn .ms { font-size: 24px; }
+.kd-atau { display: flex; align-items: center; gap: 14px; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; color: #2A3150; text-transform: uppercase; margin-top: 4px; }
+.kd-atau::before, .kd-atau::after { content: ''; flex: 1; height: 1px; background: #D4DAEB; }
+.kd-google { background: #F1F3FF; border-radius: 12px; padding: 14px; display: flex; justify-content: center; min-height: 60px; align-items: center; }
+.kd-note { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13px; color: #2A3150; letter-spacing: .02em; text-align: center; }
+.kd-restrict { margin-top: 26px; padding: 18px 20px; border-radius: 12px; background: #F1F3FF; font-size: 13px; line-height: 1.65; color: #2A3150; text-align: center; letter-spacing: .02em; }
+.kd-restrict b { letter-spacing: .04em; }
+.kd-foot { margin-top: 24px; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: var(--navy-soft); text-transform: uppercase; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+@media (max-width: 560px) { .kd-card { padding: 32px 22px 28px; } .kd-card h1 { font-size: 28px; } .kd-btn { font-size: 16px; } .kd-status { font-size: 11px; } }
+
+/* ---------- 404 netral ---------- */
+.nf { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px; background: var(--cream); }
+.nf .kode { font-family: var(--f-serif); font-size: clamp(90px, 18vw, 160px); font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--navy-soft); }
+.nf h1 { font-size: 30px; margin-top: 8px; }
+.nf p { color: var(--ink-2); margin-top: 10px; max-width: 420px; }
+.nf .btn { margin-top: 24px; }
+
+/* ---------- Verifikasi sertifikat ---------- */
+.vf-page { min-height: 100vh; background: var(--cream); }
+.vf-top { background: var(--navy); padding: 22px 0 120px; border-radius: 0 0 var(--r-2xl) var(--r-2xl); }
+.vf-top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.vf-top .judul { text-align: center; margin-top: 46px; color: var(--cream-2); }
+.vf-top .judul h1 { color: var(--cream-2); font-size: clamp(30px, 4vw, 44px); }
+.vf-top .judul .sc { font-family: var(--f-script); color: var(--mint-d); font-size: 28px; }
+.vf-main { max-width: 820px; margin: -84px auto 60px; padding: 0 16px; position: relative; z-index: 2; display: grid; gap: 20px; }
+.vf-cari { display: flex; gap: 10px; }
+.vf-cari .input { height: 52px; font-family: var(--f-mono); text-transform: uppercase; letter-spacing: .06em; }
+@media (max-width: 600px) { .vf-cari { flex-direction: column; } }
+.vf-hasil { overflow: hidden; padding: 0; }
+.vf-status { padding: 22px 28px; display: flex; align-items: center; gap: 16px; }
+.vf-status.sah { background: linear-gradient(90deg, #E7F8EF, #F4FBF7); }
+.vf-status.tarik { background: linear-gradient(90deg, #FFE7E3, #FFF5F3); }
+.vf-status .ikon { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: #fff; flex-shrink: 0; }
+.vf-status.sah .ikon { background: var(--ok); } .vf-status.tarik .ikon { background: var(--danger); }
+.vf-status .ikon .ms { font-size: 30px; }
+.vf-status b { font-size: 20px; display: block; }
+.vf-isi { padding: 28px; }
+.vf-nama { font-family: var(--f-serif); font-size: clamp(28px, 4vw, 38px); font-weight: 700; line-height: 1.15; }
+.vf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; margin-top: 22px; }
+.vf-grid div span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.vf-grid div b { display: block; margin-top: 3px; font-size: 15px; word-break: break-word; }
+@media (max-width: 600px) { .vf-grid { grid-template-columns: 1fr; } }
+.vf-hash { margin-top: 22px; padding: 16px; border-radius: 12px; background: var(--line-3); border: 1px dashed var(--line); }

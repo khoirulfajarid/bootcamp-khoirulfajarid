@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk & Daftar — Bootcamp Hub</title>
+  <meta name="description" content="Portal member & mentor Bootcamp Hub: masuk, daftar program, atau atur ulang sandi.">
+  <meta name="theme-color" content="#0C1B3A">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=1.0.0">
+  <link rel="stylesheet" href="css/auth.css?v=1.0.0">
+</head>
+<body>
+  <div class="auth">
+    <aside class="auth-l">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <a class="brand-auth" href="index.html"><span class="lg"><img src="img/logo.svg" alt=""></span><span><b id="orgNama">Bootcamp Hub</b><small>Member Portal</small></span></a>
+      <h1>Satu portal untuk perjalanan belajar Anda <span class="aksen">dari tugas pertama hingga lulus.</span></h1>
+      <p class="lead">Kumpulkan tugas, terima review mentor, pantau progres kelulusan, dan unduh sertifikat terverifikasi — semuanya di sini.</p>
+      <ul class="manfaat">
+        <li><span class="ms">checklist</span><div><b>Monitoring tugas bertahap</b>Checklist & progress bar otomatis untuk setiap modul.</div></li>
+        <li><span class="ms">rate_review</span><div><b>Review mentor praktisi</b>Status diterima/revisi beserta catatan perbaikan.</div></li>
+        <li><span class="ms">workspace_premium</span><div><b>Sertifikat otomatis ber-QR</b>Terbit saat syarat kelulusan terpenuhi, dikirim via email & WhatsApp.</div></li>
+        <li><span class="ms">collections</span><div><b>Showcase karya alumni</b>Tampilkan hingga 5 foto karya terbaik di landing page.</div></li>
+      </ul>
+      <div class="foot"><span>© <span id="thn"></span> <span id="orgNama2">Bootcamp Hub</span></span><a href="verifikasi.html">Verifikasi sertifikat</a></div>
+    </aside>
+
+    <main class="auth-r">
+      <div class="auth-card">
+        <a class="kembali" href="index.html"><span class="ms sm">arrow_back</span>Kembali ke beranda</a>
+
+        <!-- MASUK / DAFTAR -->
+        <section id="vUtama">
+          <div class="head"><h2 id="judul">Selamat datang kembali</h2><p id="subjudul">Masuk ke portal member atau mentor.</p></div>
+          <div class="auth-tabs" role="tablist">
+            <button type="button" role="tab" class="on" data-tab="masuk" aria-selected="true">Masuk</button>
+            <button type="button" role="tab" data-tab="daftar" aria-selected="false">Daftar Bootcamp</button>
+          </div>
+
+          <form class="form" id="fMasuk" novalidate>
+            <div class="field"><label for="mEmail">Email</label>
+              <div class="input-ikon"><span class="ms">mail</span><input class="input" id="mEmail" type="email" autocomplete="email" required placeholder="nama@email.com"></div></div>
+            <div class="field"><label for="mSandi">Sandi <a href="#lupa" class="xs" id="lnkLupa">Lupa sandi?</a></label>
+              <div class="input-ikon"><span class="ms">key</span><input class="input" id="mSandi" type="password" autocomplete="current-password" required placeholder="••••••••">
+                <button type="button" class="btn btn-text btn-icon btn-sm aksi" data-lihat="mSandi" aria-label="Tampilkan sandi"><span class="ms">visibility</span></button></div></div>
+            <button class="btn btn-navy btn-lg btn-block" type="submit"><span class="ms">login</span>Masuk ke Portal</button>
+            <div id="gWrapMasuk" hidden><div class="atau">atau</div><div class="gbtn-wrap" id="gBtnMasuk"></div></div>
+            <p class="hint" style="text-align:center">Belum punya akun? <a href="#daftar" data-ke="daftar">Daftar program bootcamp</a></p>
+          </form>
+
+          <form class="form" id="fDaftar" novalidate hidden>
+            <div id="tutupDaftar" class="banner warn" hidden><span class="ms">event_busy</span><div>Pendaftaran sedang ditutup. Silakan kembali saat cohort baru dibuka.</div></div>
+            <div class="field"><label for="dNama" class="req">Nama lengkap</label><input class="input" id="dNama" autocomplete="name" required maxlength="80" placeholder="Sesuai yang akan tercetak di sertifikat"></div>
+            <div class="g2">
+              <div class="field"><label for="dEmail" class="req">Email</label><input class="input" id="dEmail" type="email" autocomplete="email" required placeholder="nama@email.com"></div>
+              <div class="field"><label for="dWA" class="req">WhatsApp</label><input class="input" id="dWA" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0812xxxxxxx"></div>
+            </div>
+            <div class="field"><label for="dBootcamp" class="req">Program bootcamp</label><select class="select" id="dBootcamp" required><option value="">Memuat program…</option></select></div>
+            <div class="g2">
+              <div class="field"><label for="dProfesi">Profesi <span class="opt">(opsional)</span></label><input class="input" id="dProfesi" maxlength="80" placeholder="Mis. Staf Administrasi"></div>
+              <div class="field"><label for="dKota">Kota <span class="opt">(opsional)</span></label><input class="input" id="dKota" maxlength="60" placeholder="Mis. Bogor"></div>
+            </div>
+            <div class="g2">
+              <div class="field"><label for="dSandi" class="req">Sandi</label><input class="input" id="dSandi" type="password" autocomplete="new-password" required minlength="8" placeholder="Min. 8, huruf + angka"><div class="kekuatan" id="kekuatan"><i></i><i></i><i></i><i></i></div></div>
+              <div class="field"><label for="dSandi2" class="req">Ulangi sandi</label><input class="input" id="dSandi2" type="password" autocomplete="new-password" required placeholder="Ketik ulang sandi"></div>
+            </div>
+            <label class="cek"><input type="checkbox" id="dSetuju" required><span class="small ink2">Saya setuju data saya dipakai untuk administrasi bootcamp, notifikasi tugas via email/WhatsApp, dan penerbitan sertifikat.</span></label>
+            <button class="btn btn-lg btn-block" type="submit"><span class="ms">how_to_reg</span>Daftar &amp; Mulai Belajar</button>
+            <div id="gWrapDaftar" hidden><div class="atau">atau isi otomatis dengan</div><div class="gbtn-wrap" id="gBtnDaftar"></div></div>
+          </form>
+        </section>
+
+        <!-- LUPA SANDI -->
+        <section id="vLupa" hidden>
+          <div class="head"><h2>Atur ulang sandi</h2><p>Kami kirim kode 6 digit ke email/WhatsApp terdaftar.</p></div>
+          <form class="form" id="fLupa1" novalidate>
+            <div class="field"><label for="lEmail">Email terdaftar</label><div class="input-ikon"><span class="ms">mail</span><input class="input" id="lEmail" type="email" required placeholder="nama@email.com"></div></div>
+            <button class="btn btn-navy btn-lg btn-block" type="submit"><span class="ms">send</span>Kirim Kode Reset</button>
+          </form>
+          <form class="form" id="fLupa2" novalidate hidden>
+            <div class="banner ok"><span class="ms">mark_email_read</span><div id="lupaInfo">Kode terkirim. Periksa email/WhatsApp Anda (juga folder spam).</div></div>
+            <div class="field"><label for="lKode">Kode 6 digit</label><input class="input mono" id="lKode" inputmode="numeric" maxlength="6" required placeholder="000000" style="letter-spacing:.4em;font-size:20px;text-align:center"></div>
+            <div class="g2">
+              <div class="field"><label for="lSandi">Sandi baru</label><input class="input" id="lSandi" type="password" autocomplete="new-password" required placeholder="Min. 8, huruf + angka"></div>
+              <div class="field"><label for="lSandi2">Ulangi</label><input class="input" id="lSandi2" type="password" autocomplete="new-password" required></div>
+            </div>
+            <button class="btn btn-lg btn-block" type="submit"><span class="ms">lock_reset</span>Simpan Sandi Baru</button>
+          </form>
+          <p class="hint mt-4" style="text-align:center"><a href="#masuk" data-ke="masuk">← Kembali ke halaman masuk</a></p>
+        </section>
+
+        <!-- SUKSES -->
+        <section id="vSukses" hidden><div class="sukses-box"><span class="ms fill">task_alt</span><h3 id="suksesJudul">Berhasil</h3><p id="suksesPesan"></p><a class="btn btn-navy mt-6" href="#masuk" data-ke="masuk">Ke halaman masuk</a></div></section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/config.js?v=1.0.0"></script>
+  <script src="js/core.js?v=1.0.0"></script>
+  <script src="js/auth.js?v=1.0.0" defer></script>
+</body>
+</html>

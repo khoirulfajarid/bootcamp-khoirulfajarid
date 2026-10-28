@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootcamp Hub — Akademi Talenta Digital & Showcase Alumni</title>
+  <meta name="description" content="Bootcamp dengan kurikulum bertahap, review mentor praktisi, sertifikat terverifikasi QR, dan etalase karya nyata para alumni.">
+  <meta name="theme-color" content="#0C1B3A">
+  <meta property="og:title" content="Bootcamp Hub — Akademi Talenta Digital">
+  <meta property="og:description" content="Kurikulum bertahap, mentor praktisi, sertifikat terverifikasi, dan showcase karya alumni.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://script.google.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=1.0.0">
+  <link rel="stylesheet" href="css/landing.css?v=1.0.0">
+  <script>document.documentElement.classList.add(window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'no-anim' : 'js-anim');</script>
+</head>
+<body class="landing">
+  <a class="skip" href="#utama">Lewati ke konten utama</a>
+
+  <!-- HEADER — tanpa tautan login administrator (PRD: jalur admin tersembunyi) -->
+  <header class="lp-head" id="lpHead">
+    <div class="wrap lp-head-in">
+      <a class="brand" href="#utama" aria-label="Beranda">
+        <span class="brand-logo"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2L4 7v8c0 7.4 5.1 14.2 12 16 6.9-1.8 12-8.6 12-16V7L16 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M16 7l-7 4v5c0 4.4 3 8.5 7 9.5 4-1 7-5.1 7-9.5v-5l-7-4Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.25"/><circle cx="16" cy="15" r="2.5" fill="currentColor"/></svg></span>
+        <span><span class="brand-name" data-org="nama">Bootcamp <em>Hub</em></span><span class="brand-tag" data-org="tagline">Academy &amp; Alumni</span></span>
+      </a>
+      <nav class="lp-nav" aria-label="Navigasi utama">
+        <a href="#utama" class="on">Beranda</a>
+        <a href="#program">Program</a>
+        <a href="#showcase">Showcase Alumni</a>
+        <a href="#alumni">Kisah Alumni</a>
+        <a href="#verifikasi">Verifikasi Sertifikat</a>
+      </nav>
+      <div class="lp-cta">
+        <a class="lnk" href="masuk.html">Masuk Member</a>
+        <a class="btn btn-pill" href="masuk.html#daftar" id="ctaDaftarHead">Gabung Bootcamp</a>
+        <button class="lp-burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="mnav"><span class="ms">menu</span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="lp-mnav" id="mnav" aria-label="Menu ponsel">
+    <a href="#program">Program</a><a href="#showcase">Showcase Alumni</a><a href="#alumni">Kisah Alumni</a><a href="#verifikasi">Verifikasi Sertifikat</a><a href="masuk.html">Masuk Member</a>
+    <a class="btn btn-pill" href="masuk.html#daftar">Gabung Bootcamp</a>
+  </nav>
+
+  <main id="utama">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroJudul">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="hero-badge" data-a><span class="dot pulse"></span><span id="heroBadge">Akademi Teknologi &amp; Sertifikasi Terverifikasi</span></span>
+          <h1 class="hero-title" id="heroJudul" data-a>
+            <span class="shine" id="heroJudulTeks">Mencetak Talenta Digital &amp;</span>
+            <span class="hero-aksen" id="heroAksen">Pemimpin Masa Depan.</span>
+          </h1>
+          <p class="hero-sub" id="heroSub" data-a>Kurikulum intensif bertahap, review mentor praktisi, sertifikat yang bisa diverifikasi siapa saja, dan etalase karya nyata para alumni.</p>
+          <div class="hero-ctas" data-a>
+            <a class="btn btn-lg btn-glow" href="masuk.html#daftar" id="ctaDaftar"><span>Daftar Sekarang</span><span class="ms">arrow_forward</span></a>
+            <a class="btn btn-lg btn-light" href="#showcase"><span class="ms" style="color:var(--mint-d)">visibility</span><span>Lihat Karya Alumni</span></a>
+          </div>
+          <div class="trust" id="trust" data-a hidden></div>
+        </div>
+        <div class="hero-vis" data-a id="heroVis" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="stats-wrap" aria-label="Statistik">
+      <div class="wrap"><div class="stats reveal" id="stats"></div></div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="sec" id="program" aria-labelledby="progJudul">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Jalur Kurikulum Berbasis Peran</span>
+          <h2 id="progJudul">Program Terarah yang Dirancang untuk <span class="aksen">Transformasi Karier Anda…</span></h2>
+          <p>Setiap jalur punya milestone tugas terstruktur, review mentor berkala, dan portofolio mandiri yang siap diuji perekrut.</p>
+        </div>
+        <div class="prog-grid" id="progGrid"></div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="sec sec-soft showcase" id="showcase" aria-labelledby="showJudul">
+      <div class="ghost" aria-hidden="true"><span class="g1">empowering</span><span class="g2">talents</span></div>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Etalase Portofolio Kelulusan</span>
+          <h2 id="showJudul">Karya Nyata yang Menggerakkan <span class="aksen">Industri.</span></h2>
+          <p>Setiap karya di sini lolos kurasi tim akademik sebelum ditayangkan — bukti kompetensi, bukan sekadar klaim.</p>
+        </div>
+        <div id="showcaseIsi"></div>
+      </div>
+    </section>
+
+    <!-- ALUMNI -->
+    <section class="sec" id="alumni" aria-labelledby="alumniJudul">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Jejaring Alumni Berdampak</span>
+          <h2 id="alumniJudul">Kisah Nyata dari Mereka yang <span class="aksen">Telah Lulus &amp; Berkarier.</span></h2>
+          <p>Sorot atau ketuk kartu untuk membalik dan membaca kisah lengkap beserta verifikasi sertifikatnya.</p>
+        </div>
+        <div class="flip-grid" id="flipGrid"></div>
+      </div>
+    </section>
+
+    <!-- VERIFIKASI -->
+    <section class="sec sec-soft" id="verifikasi" aria-labelledby="verifJudul" style="padding-top:88px;padding-bottom:88px">
+      <div class="wrap">
+        <div class="verif-card reveal">
+          <div class="verif-l">
+            <span class="sc">Anti-pemalsuan</span>
+            <h2 id="verifJudul">Verifikasi Sertifikat Alumni</h2>
+            <p>Setiap sertifikat memuat QR dan kode unik. Perusahaan maupun publik dapat memeriksa keasliannya kapan saja — tanpa login.</p>
+            <div class="bulat"></div>
+          </div>
+          <div class="verif-r">
+            <label class="label" for="verifKode">Kode verifikasi atau nomor sertifikat</label>
+            <form class="verif-form" id="verifForm">
+              <input class="input" id="verifKode" placeholder="Contoh: K7QXMP2D9ABC" autocomplete="off" required minlength="6">
+              <button class="btn btn-navy btn-lg" type="submit"><span class="ms">verified</span>Periksa</button>
+            </form>
+            <p class="hint">Kode tercetak di bawah QR pada sertifikat. Pindai QR juga langsung membuka halaman verifikasi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="blob b1" style="left:auto;right:-120px;top:auto;bottom:-160px"></div>
+      <div class="wrap reveal" style="position:relative;z-index:2">
+        <span class="eyebrow" style="color:var(--mint-d)">Pendaftaran Cohort Baru Dibuka</span>
+        <h2>Siap Mewujudkan Lompatan Karier Digital Anda <span class="aksen">Bersama Komunitas Terbaik?</span></h2>
+        <p>Pilih program, kerjakan tugas bertahap bersama mentor, dan tampilkan karya terbaik Anda di etalase alumni.</p>
+        <div class="hero-ctas" style="justify-content:center">
+          <a class="btn btn-lg btn-glow" href="masuk.html#daftar"><span>Daftar Sekarang</span><span class="ms">arrow_forward</span></a>
+          <a class="btn btn-lg btn-light" href="#verifikasi"><span class="ms" style="color:var(--mint-d)">verified</span><span>Verifikasi Sertifikat</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lp-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="#utama"><span class="brand-logo"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2L4 7v8c0 7.4 5.1 14.2 12 16 6.9-1.8 12-8.6 12-16V7L16 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M16 7l-7 4v5c0 4.4 3 8.5 7 9.5 4-1 7-5.1 7-9.5v-5l-7-4Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.25"/><circle cx="16" cy="15" r="2.5" fill="currentColor"/></svg></span>
+            <span><span class="brand-name" data-org="nama">Bootcamp <em>Hub</em></span><span class="brand-tag" data-org="tagline">Academy &amp; Alumni</span></span></a>
+          <p class="small mt-4" id="footDesk" style="max-width:360px">Platform akselerasi talenta digital: kurikulum bertahap, mentor praktisi, sertifikat terverifikasi, dan etalase karya alumni.</p>
+          <div class="sosmed" id="sosmed"></div>
+        </div>
+        <div>
+          <h4>Jelajahi</h4>
+          <ul><li><a href="#program">Program Bootcamp</a></li><li><a href="#showcase">Showcase Karya</a></li><li><a href="#alumni">Kisah Alumni</a></li><li><a href="verifikasi.html">Verifikasi Sertifikat</a></li></ul>
+        </div>
+        <div>
+          <h4>Peserta</h4>
+          <ul><li><a href="masuk.html#daftar">Daftar Bootcamp</a></li><li><a href="masuk.html">Masuk Portal Member</a></li><li><a href="masuk.html#lupa">Lupa Sandi</a></li></ul>
+        </div>
+        <div>
+          <h4>Hubungi Kami</h4>
+          <ul id="kontak"><li><span class="ms">mail</span><span>Kontak akan tampil di sini</span></li></ul>
+        </div>
+      </div>
+      <div class="foot-bot"><span>© <span id="thn"></span> <span data-org="nama-teks">Bootcamp Hub</span>. Hak cipta dilindungi.</span><span>Dibangun dengan Google Apps Script + GitHub Pages</span></div>
+    </div>
+  </footer>
+
+  <noscript><div class="banner warn" style="position:fixed;bottom:12px;left:12px;right:12px;z-index:3000">Aktifkan JavaScript untuk melihat karya & testimoni alumni.</div></noscript>
+
+  <script src="js/config.js?v=1.0.0"></script>
+  <script src="js/core.js?v=1.0.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/landing.js?v=1.0.0" defer></script>
+</body>
+</html>

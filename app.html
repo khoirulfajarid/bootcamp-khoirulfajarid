@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Portal — Bootcamp Hub</title>
+  <meta name="theme-color" content="#0C1B3A">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=1.0.0">
+  <link rel="stylesheet" href="css/app.css?v=1.0.0">
+  <script>
+    // Penjaga awal: tanpa sesi → langsung ke halaman masuk (sebelum apa pun dirender)
+    (function () { try { if (!sessionStorage.getItem('bh_sesi') && !localStorage.getItem('bh_sesi')) location.replace('masuk.html'); } catch (e) { /* abaikan */ } })();
+  </script>
+</head>
+<body class="app">
+  <a class="sr-only" href="#view">Lompat ke konten</a>
+  <div class="app-shell" id="shell" hidden>
+    <aside class="sb" id="sb" aria-label="Navigasi utama">
+      <a class="sb-brand" href="#/beranda"><span class="sb-logo"><img src="img/logo.svg" alt=""></span><span><b id="sbOrg">Bootcamp Hub</b><small id="sbSub">Portal</small></span></a>
+      <nav class="sb-nav" id="sbNav"></nav>
+      <div class="sb-foot" id="sbFoot"></div>
+    </aside>
+    <div class="sb-ov" id="sbOv"></div>
+    <div class="mn">
+      <header class="hd">
+        <div class="hd-l">
+          <button class="btn btn-ghost btn-icon btn-sm hd-burger" id="btnMenu" aria-label="Buka menu"><span class="ms">menu</span></button>
+          <div class="crumb" id="crumb"></div>
+          <span class="hd-chip" id="hdChip" hidden></span>
+        </div>
+        <div class="hd-r">
+          <a class="hd-link" href="index.html" target="_blank" rel="noopener"><span class="ms">public</span><span class="t">Landing</span></a>
+          <div style="position:relative">
+            <button class="btn btn-ghost btn-icon hd-bell" id="btnBell" aria-label="Notifikasi"><span class="ms">notifications</span><span class="titik" id="bellDot" hidden></span></button>
+          </div>
+          <div style="position:relative">
+            <button class="hd-user" id="btnUser" aria-haspopup="menu"><span id="hdAvatar"></span><span style="text-align:left"><b id="hdNama"></b><small id="hdPeran"></small></span></button>
+          </div>
+        </div>
+      </header>
+      <main class="view" id="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <div class="full" id="vMuat"><div class="box"><div class="loader"></div><p class="mt-4">Menyiapkan portal…</p></div></div>
+
+  <script src="js/config.js?v=1.0.0"></script>
+  <script src="js/core.js?v=1.0.0"></script>
+  <script src="js/app.js?v=1.0.0"></script>
+  <script src="js/v-member.js?v=1.0.0"></script>
+  <script src="js/v-mentor.js?v=1.0.0"></script>
+  <script src="js/v-admin.js?v=1.0.0"></script>
+  <script src="js/v-sistem.js?v=1.0.0"></script>
+  <script>BH.app.mulai();</script>
+</body>
+</html>
